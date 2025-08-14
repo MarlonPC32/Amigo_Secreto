@@ -160,3 +160,76 @@ ul {
 .button-draw:hover {
     background-color: var(--color-button-hover);
 }
+
+/* ===== RESPONSIVE ===== */
+
+/* Pantallas medianas (tablets y móviles grandes) */
+@media (max-width: 768px) {
+  .main-title {
+    font-size: 32px;
+    text-align: center;
+  }
+
+  .section-title {
+    font-size: 24px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+  }
+
+  .input-name {
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+
+  .button-add {
+    border-radius: 25px;
+    width: 100%;
+  }
+
+  .button-container {
+    width: 100%;
+  }
+
+  .button-draw {
+    justify-content: center;
+    padding: 10px 20px;
+  }
+
+  .button-draw img {
+    margin-right: 10px;
+  }
+}
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 480px) {
+  .main-title {
+    font-size: 26px;
+  }
+
+  .section-title {
+    font-size: 20px;
+  }
+
+  body {
+    padding: 10px;
+    height: auto;
+    align-items: flex-start;
+  }
+
+  .input-section {
+    border-radius: 32px 32px 0 0;
+    padding: 15px;
+  }
+
+  ul {
+    font-size: 16px;
+  }
+
+  .result-list {
+    font-size: 18px;
+  }
+}
