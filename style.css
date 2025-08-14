@@ -233,3 +233,112 @@ ul {
     font-size: 18px;
   }
 }
+
+/* ===== PARCHE RESPONSIVE FINO ===== */
+
+/* Fix generales */
+html, body { width:100%; overflow-x:hidden; }
+.main-content { width:100%; }
+
+/* Header más flexible */
+.header-banner {
+  flex: unset;                 /* quita el 40% fijo */
+  flex-wrap: wrap;
+  gap: 12px;
+  padding: 28px 0 0;
+  text-align: center;
+}
+.header-banner img {
+  max-width: 320px;
+  width: 45vw;
+  height: auto;
+}
+
+/* Quita el 60% fijo y deja crecer por contenido */
+.input-section { flex: unset; }
+
+/* Inputs con separación y sin forzar fila en móvil */
+.input-wrapper { gap: 10px; }
+
+/* Botón grande centrado y sin desbordes */
+.button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.button-draw {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Listas ocupan el ancho con padding cómodo */
+.name-list, .result-list { width: 100%; padding: 0 8px; }
+
+/* ——— Breakpoint tablet ——— */
+@media (max-width: 768px) {
+  /* Evita “saltos” de 100vh en móviles */
+  body {
+    height: auto;
+    min-height: 100dvh;
+    align-items: flex-start;   /* deja de centrar verticalmente */
+    padding: 0 8px;
+  }
+
+  .main-title { font-size: 32px; }
+  .section-title { font-size: 24px; }
+
+  .header-banner img {
+    width: 60%;
+    max-width: 240px;
+  }
+
+  .input-section {
+    border-radius: 32px 32px 0 0;
+    padding: 16px 12px;
+  }
+
+  .input-wrapper {
+    flex-direction: column;
+    align-items: stretch;
+    max-width: 100%;
+  }
+
+  .input-name {
+    border-radius: 25px;
+    margin-bottom: 8px;
+    font-size: 16px;
+  }
+
+  .button-add {
+    border-radius: 25px;
+    width: 100%;
+  }
+
+  .button-draw {
+    justify-content: center;
+    padding: 12px 16px;
+  }
+  .button-draw img {
+    width: 22px;
+    height: auto;
+    margin-right: 10px;
+  }
+
+  ul { font-size: 16px; margin: 14px 0; }
+  .result-list { font-size: 18px; }
+}
+
+/* ——— Breakpoint móvil chico ——— */
+@media (max-width: 480px) {
+  .main-title { font-size: 26px; }
+  .section-title { font-size: 20px; }
+
+  .header-banner { padding-top: 20px; }
+  .header-banner img {
+    width: 72%;
+    max-width: 180px;
+  }
+
+  .button-draw { font-size: 15px; }
+}
